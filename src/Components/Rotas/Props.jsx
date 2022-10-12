@@ -4,6 +4,8 @@ import * as S from './Style'
 import Sol from '../../Assets/sol.png'
 import Lua from '../../Assets/Lua.webp'
 import GlobalStyle from '../GlobalStyle/Global';
+import Photo from '../../Assets/pngegg.png'
+
 
 
 const Props = ({ route, routeB, routeC, Logo }) => {
@@ -69,8 +71,9 @@ const Props = ({ route, routeB, routeC, Logo }) => {
                     </motion.li>
                 </motion.ul>
             </motion.nav>
+            <S.Title>Welcome</S.Title>
             <div className='box_logo--services'>
-                <S.Logo  src={Logo} alt='Logo' />
+                <S.Logo src={Photo} alt='Logo' />
                 <S.Mode onClick={modalCall} title={open === true ? 'LightMode' : 'DarkMode'} src={open === true ? Sol : Lua} alt='light/dark-mode' />
             </div>
         </S.Container>

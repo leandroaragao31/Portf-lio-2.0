@@ -8,14 +8,18 @@ justify-content:center;
 line-height:6vh;
 align-items:center;
 height:70vh;
+@media(max-width:400px){
+        font-size:0.8rem;
+    }
 
 `
 
 
 export const BoxImg = styled.figure`
-    width:200px;
-    height:200px;
-
+    width:15%;
+    @media(max-width:400px){
+        width:40%;
+    }
 `
 
 export const Photo = styled.img`
