@@ -6,10 +6,13 @@ import { Link } from 'react-router-dom';
 
 
 export const Container = styled.header`
-background-color:${props => (props.mode === true ? '#03111E' : '#A7BEC0')};
+background-color:${props => (props.mode === true ? '#03111E' : '#faebd7')};
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
+    max-width:1920px;
+    width:100%;
+    margin:auto;
     @media(max-width:800px){
     flex-direction:row-reverse;
     font-size:1rem;
@@ -20,12 +23,13 @@ button{
     background-color:transparent;
     cursor:pointer;
     color:${props => (props.mode === true ? '#919191' : '#574940')};;
-    margin-left:2vw;
+    margin-left:4vw;
     height: 10vh;
     border:none;
     display:flex;
     align-items:center;
     justify-content:center;
+    
     @media(max-width:800px){
         height:5vh;
     }
@@ -44,23 +48,41 @@ li{
     }
 }
 .box_logo--services{
-    width:57%;
+    width:56%;
+    height:22vh;
+    border:none;;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:2vw;
+    margin-top:1vh;
     @media(max-width:800px){
-        width:10%;
-        justify-content:flex-start;
+        width:55%;
+        height:20vh;
+        flex-direction:row-reverse;
+        justify-content:space-between;
+        align-items:flex-start;
+        margin:0;
     }
     @media(max-width:400px){
-        width:15%;
+        width:15%; 
     }
+  
 }
+`
+export const Logo = styled.img`
 
-`;
+@media(max-width:800px){
+        height:10vh;
+    
+    }
+   @media(max-width:400px){
+        display:none;
+    }
 
-export const Title = styled.h1`
+`
+
+
+/* export const Title = styled.h1`
     display:none;
     @media(max-width:800px){
         display:flex;
@@ -73,23 +95,22 @@ export const Title = styled.h1`
         height:24vh;
     }
 
-`
+` */
 
-export const Logo = styled.img`
-    width:15%;
-    @media(max-width:800px){
-        display:none;
-    }
-`
+
 
 export const Mode = styled.img`
     width:10%;
     cursor:pointer;
     transition:2s ease-in-out;
+    margin-right:1vw;
     &:hover{
         filter: drop-shadow(7px 4px 2px rgba(252, 163, 17, 0.4));
     }
     @media(max-width:800px){
+        width:10%;
+    }
+    @media(max-width:400px){
         width:100%;
     }
 
@@ -97,7 +118,9 @@ export const Mode = styled.img`
 
 export const MenuLink = styled(Link)`
     text-decoration:none;
-    color:${props => (props.mode === true ? '#919191' : '#574940')};;
+    color:${props => (props.mode === true ? '#919191' : '#574940')};
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight:700;
 `
 
 /* 

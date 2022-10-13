@@ -2,9 +2,9 @@ import React, { useState, useCallback } from 'react';
 import { motion } from "framer-motion"
 import * as S from './Style'
 import Sol from '../../Assets/sol.png'
-import Lua from '../../Assets/Lua.webp'
+import Lua from '../../Assets/Moon.png'
+import LA from '../../Assets/LA.png'
 import GlobalStyle from '../GlobalStyle/Global';
-import Photo from '../../Assets/pngegg.png'
 
 
 
@@ -21,11 +21,11 @@ const Props = ({ route, routeB, routeC, Logo }) => {
         },
         closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
     };
+ 
 
     return (
         <S.Container mode={open}>
             <GlobalStyle mode={open} />
-
             <motion.nav initial={false} animate={isOpen ? "open" : "closed"}>
                 <motion.button whileTap={{ scale: 0.97 }} onClick={menuCall}>
                     <motion.div className='menu'
@@ -71,9 +71,9 @@ const Props = ({ route, routeB, routeC, Logo }) => {
                     </motion.li>
                 </motion.ul>
             </motion.nav>
-            <S.Title>Welcome</S.Title>
+           
             <div className='box_logo--services'>
-                <S.Logo src={Photo} alt='Logo' />
+                <S.Logo src={LA} alt='LA' />
                 <S.Mode onClick={modalCall} title={open === true ? 'LightMode' : 'DarkMode'} src={open === true ? Sol : Lua} alt='light/dark-mode' />
             </div>
         </S.Container>

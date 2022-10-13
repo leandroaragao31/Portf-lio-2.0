@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useState, useCallback} from 'react';
 import * as S from './Style'
 import Leo from '../../../Assets/Leandro.jpeg'
+import Photo from '../../../Assets/pngegg.png'
+import Contac from './Contac';
+import Linkedin from '../../../Assets/Linkedin.png'
+import GitHub from '../../../Assets/Github.png'
+import Instagram from '../../../Assets/instagram.png'
 
 
 const Home = () => {
-
+    const [open, setOpen] = useState(false)
+    const ContactCallBack = useCallback(() => setOpen(!open), [open])
 
     return (
         <S.Container>
@@ -14,7 +20,10 @@ const Home = () => {
             <S.BoxImg>
                 <S.Photo src={Leo} alt='Eu' />
             </S.BoxImg>
-            
+            <S.BoxContact>
+                <S.Logo src={Photo} alt='Logo' onClick={ContactCallBack} title='Contatos'/>
+                {open && <Contac linkedin={Linkedin} github={GitHub} instagram={Instagram} />}
+            </S.BoxContact>
         </S.Container>
     )
 }

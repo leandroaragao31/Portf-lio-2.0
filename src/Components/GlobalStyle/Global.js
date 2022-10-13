@@ -8,8 +8,8 @@ const GlobalStyle = createGlobalStyle`
         list-style:none;
     }
     body{
-        background-color:${props => (props.mode === true ? '#264158' : '#FFF0CC')};
-        color:${props => (props.mode === true ? '#919191' : '#574940')};;
+        background-color:${props => (props.mode === true ? '#264158' : '#fff0f5')};
+        color:${props => (props.mode === true ? '#919191' : '#574940')};
     }
 
 
