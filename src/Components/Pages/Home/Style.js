@@ -53,7 +53,9 @@ export const BoxContact = styled.figure`
     width:96%;
     display:flex;
     align-items:center;
-
+ figcaption{
+    font-size:13px;
+ }
     @media(max-width:800px){
        height:20vh;
     }
@@ -119,7 +121,7 @@ animation: scale-up-hor-left 0.7s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
   }
 }
     @media(max-width:800px){
-       width:8vw;
+       width:9vw;
        
     }
 }
@@ -156,7 +158,7 @@ animation: scale-up-hor-left 0.7s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
   }
 }
     @media(max-width:800px){
-       width:15vw;
+       width:14vw;
     }
 }
 `

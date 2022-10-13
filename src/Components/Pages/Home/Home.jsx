@@ -22,6 +22,7 @@ const Home = () => {
             </S.BoxImg>
             <S.BoxContact>
                 <S.Logo src={Photo} alt='Logo' onClick={ContactCallBack} title='Contatos'/>
+                <figcaption>Click for Contact</figcaption>
                 {open && <Contac linkedin={Linkedin} github={GitHub} instagram={Instagram} />}
             </S.BoxContact>
         </S.Container>
