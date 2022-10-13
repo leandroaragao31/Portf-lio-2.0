@@ -63,7 +63,7 @@ li{
         align-items:flex-start;
         margin:0;
     }
-    @media(max-width:400px){
+    @media(max-width:500px){
         width:15%; 
     }
   
@@ -75,7 +75,7 @@ export const Logo = styled.img`
         height:10vh;
     
     }
-   @media(max-width:400px){
+   @media(max-width:500px){
         display:none;
     }
 
@@ -110,7 +110,7 @@ export const Mode = styled.img`
     @media(max-width:800px){
         width:10%;
     }
-    @media(max-width:400px){
+    @media(max-width:500px){
         width:100%;
     }
 
