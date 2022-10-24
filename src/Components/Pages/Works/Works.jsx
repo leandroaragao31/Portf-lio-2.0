@@ -3,7 +3,7 @@ import React from 'react';
 const Works = () => {
     return (
         <div>
-        <p>Porra meu</p>
+            <h2>My Projects</h2>
         </div>
     );
 }

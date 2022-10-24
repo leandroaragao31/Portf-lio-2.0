@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route,  } from 'react-router-dom';
 import About from '../Pages/AboutME/About';
 import Home from '../Pages/Home/Home';
@@ -7,8 +7,8 @@ import Props from './Props';
 
 
 const Header = () => {
-    const [open, setOpen] = useState(false)
-    const CallModal = useCallback(() => setOpen(!open), [open])
+
+    
     return (
         <Router>
             <Props  route='Home'  routeB='AboutMe' routeC='Work' />
