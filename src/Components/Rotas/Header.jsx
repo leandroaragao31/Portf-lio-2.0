@@ -11,7 +11,7 @@ const Header = () => {
     const CallModal = useCallback(() => setOpen(!open), [open])
     return (
         <Router>
-            <Props  route='Home'  routeB='AboutMe' routeC='Work' Modal={CallModal}/>
+            <Props  route='Home'  routeB='AboutMe' routeC='Work' />
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<About />}/>

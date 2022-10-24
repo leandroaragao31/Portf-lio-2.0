@@ -4,17 +4,17 @@ import styled from "styled-components";
 export const Container = styled.section`
 display:flex;
 flex-direction:column;
-justify-content:center;
+justify-content:space-evenly;
 line-height:8vh;
 align-items:center;
-height:70vh;
+height:80vh;
 font-family: 'IBM Plex Sans', sans-serif;
 font-size:20px;
 max-width:1920px;
 width:100%;
 margin:auto;
 @media(max-width:800px){
-    height:60vh;
+    height:80vh;
     font-size:16px;
 }
 
@@ -45,25 +45,30 @@ h2, h1, p{
 
 export const BoxImg = styled.figure`
     width:10%;
+    height:20vh;
+    
     @media(max-width:400px){
         width:40%;
     }
 `
 export const BoxContact = styled.figure`
-    width:96%;
+    width:40%;
     display:flex;
+    margin-right:50%;
     align-items:center;
  figcaption{
     font-size:13px;
  }
     @media(max-width:800px){
-       height:20vh;
+       height:10vh;
+       width:90%;
+       margin-right:10%;
     }
     
 
 `
 export const Logo = styled.img`
-    width:7%;
+    width:15%;
     cursor:pointer;
     @media(max-width:800px){
        width:15%;
@@ -88,7 +93,7 @@ export const ContainerContact = styled.div`
 display:flex;
 justify-content:space-evenly;
 align-items:center;
-width:20%;
+width:40%;
 animation: scale-up-hor-left 0.7s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
 @keyframes scale-up-hor-left {
   0% {
@@ -103,7 +108,7 @@ animation: scale-up-hor-left 0.7s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
 
 }
 @media(max-width:800px){
-       width:40%;
+       width:55%;
        margin-top:3vh;
     }
 

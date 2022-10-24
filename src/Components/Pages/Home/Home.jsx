@@ -18,10 +18,10 @@ const Home = () => {
             <p>I'm Leandro Aragão</p>
             <h2>Teacher and  Front-End Developer</h2>
             <S.BoxImg>
-                <S.Photo src={Leo} alt='Eu' />
+                <S.Photo src={Leo} alt='Eu' loading='lazzy' />
             </S.BoxImg>
             <S.BoxContact>
-                <S.Logo src={Photo} alt='Logo' onClick={ContactCallBack} title='Contatos'/>
+                <S.Logo src={Photo} alt='Logo' onClick={ContactCallBack} title='Contatos' loading='lazzy'/>
                 <figcaption>Click for Contact</figcaption>
                 {open && <Contac linkedin={Linkedin} github={GitHub} instagram={Instagram} />}
             </S.BoxContact>

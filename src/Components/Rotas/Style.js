@@ -9,12 +9,11 @@ export const Container = styled.header`
 background-color:${props => (props.mode === true ? '#03111E' : '#faebd7')};
     display:flex;
     justify-content:space-between;
-    align-items:flex-start;
+    align-items:center;
     max-width:1920px;
     width:100%;
     margin:auto;
     @media(max-width:800px){
-    flex-direction:row-reverse;
     font-size:1rem;
     }
 button{
@@ -23,44 +22,33 @@ button{
     background-color:transparent;
     cursor:pointer;
     color:${props => (props.mode === true ? '#919191' : '#574940')};;
-    margin-left:4vw;
     height: 10vh;
     border:none;
-    display:flex;
+    display:none;
     align-items:center;
     justify-content:center;
+
+   
     
     @media(max-width:800px){
         height:5vh;
+        display:flex;
     }
 }
 
 
-
-ul{
-    height:20vh;
-    padding: 2vw 0 0 2vw;
-}
-li{
-    height:25%;
-    @media(max-width:800px){
-        height:4vh;
-    }
-}
 .box_logo--services{
-    width:56%;
-    height:22vh;
+    width:15%;
+   height:15vh;
     border:none;;
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
     margin-top:1vh;
     @media(max-width:800px){
-        width:55%;
-        height:20vh;
-        flex-direction:row-reverse;
-        justify-content:space-between;
-        align-items:flex-start;
+        width:40%;
+        height:10vh;
+        justify-content:flex-end;
         margin:0;
     }
     @media(max-width:500px){
@@ -68,19 +56,71 @@ li{
     }
   
 }
-`
-export const Logo = styled.img`
 
-@media(max-width:800px){
-        height:10vh;
+`
+
+export const boxMenu = styled.div`
+width:30%;
+border:none;
+height:15vh;
+display:flex;
+align-items:center;
+@media(max-width:800px) {
+    flex-direction:column;
+    height:13.9vh;
+    align-items:flex-start;
     
-    }
-   @media(max-width:500px){
+}
+
+
+`
+export const NavMenu = styled.nav`
+    width:100%;
+    margin-left:1vw;
+    display:flex;
+    @media(max-width:800px){
+        width:50%;
         display:none;
+        
     }
+    ul{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+  
+}
+
+
+li{
+    width:30%;
+    text-align:center;
+    @media(max-width:800px){
+        width:30%;
+    }
+}
 
 `
 
+export const MobileMenu = styled.ul`
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    @media(max-width:800px){
+        flex-direction:column;
+        align-items:flex-start;
+        width:40%;
+        
+    }
+    li{
+    width:20%;
+    text-align:center;
+    @media(max-width:800px){
+        width:30%;
+    }
+}
+`
 
 /* export const Title = styled.h1`
     display:none;
@@ -100,27 +140,54 @@ export const Logo = styled.img`
 
 
 export const Mode = styled.img`
-    width:10%;
+    width:20%;
     cursor:pointer;
     transition:2s ease-in-out;
-    margin-right:1vw;
+    
     &:hover{
         filter: drop-shadow(7px 4px 2px rgba(252, 163, 17, 0.4));
     }
     @media(max-width:800px){
-        width:10%;
+        width:25%;
+       
     }
     @media(max-width:500px){
         width:100%;
+        margin-bottom:6vw;
     }
 
 `
 
 export const MenuLink = styled(Link)`
     text-decoration:none;
+    font-size:1.5rem;
     color:${props => (props.mode === true ? '#919191' : '#574940')};
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight:700;
+    animation: fade-in 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    @keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+    &:hover{
+       animation: borda 1.5s normal ease-in-out both;
+       @keyframes borda {
+      from {
+            border-bottom:none;
+        }   
+      
+       }
+    }
+    @media(max-width:800px){
+        font-size:18px;
+    }
+    @media(max-width:450px){
+        font-size:13px;
+    }
 `
 
 /* 
